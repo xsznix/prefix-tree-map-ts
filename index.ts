@@ -16,38 +16,24 @@ class PTMap<T> {
   }
 
   /**
-   * Adds <code>val</code> to the map at <code>key</code> if the mapping
-   * does not already exist.
-   * @param key {string} the key to add at
-   * @param val {T} the value to add
-   * @return <code>true</code> if the add succeeded; <code>false</code> if there
-   * is already a mapping at <code>key</code>
-   */
-  public add(key: string, val: T): boolean {
-    // TODO
-    return false;
-  }
-
-  /**
-   * Updates the mapping at <code>key</code> to <code>val</code> or add it if
-   * the mapping does not exist.
+   * Sets the mapping at <code>key</code> to <code>val</code>.
    * @param key {string} the key to update
    * @param val {T} the value to add
    * @return the old value at <code>key</code>, or <code>null</code> if there
    * was none
    */
-  public update(key: string, val: T): T | null {
+  public set(key: string, val: T): T | null {
     // TODO
     return null;
   }
 
   /**
-   * Removes the mapping at <code>key</code>.
+   * Deletes the mapping at <code>key</code>.
    * @param key {string} the key to remove
-   * @return the old value at <code>key</code>, or <code>null</code> if there
-   * was none
+   * @return the old value at <code>key</code>, or <code>undefined</code> if
+   * there was none
    */
-  public remove(key: string): T | null {
+  public delete(key: string): T | undefined {
     // TODO
     return null;
   }
@@ -55,12 +41,12 @@ class PTMap<T> {
   /**
    * Gets the mapping at <code>key</code>.
    * @param key {string} the key to get
-   * @return the value at <code>key</code>, or <code>null</code> if there was
-   * none
+   * @return the value at <code>key</code>, or <code>undefined</code> if there
+   * is none
    */
-  public get(key: string): T | null {
+  public get(key: string): T | undefined {
     // TODO
-    return null;
+    return undefined;
   }
 
   /**
@@ -71,7 +57,7 @@ class PTMap<T> {
    * @return an iterator over all mappings whose keys start with
    * <code>keyPrefix</code>
    */
-  public * getPrefix(keyPrefix: string): Iterable<T> {
+  public * entriesWithPrefix(keyPrefix: string): Iterable<T> {
     // TODO
   }
 }
